@@ -1,0 +1,39 @@
+
+<mat-form-field style="margin-left: 135px">
+  <input placeholder="Pesquisa" (keyup)="newSearch(searchField.value)" #searchField class="nav-input" matInput [value]="searchValue" type="text">
+
+</mat-form-field>
+<button (click)="clearSearch()" style="margin-left: 5px" mat-flat-button>
+  <span>Limpar</span>
+</button>
+
+
+
+<mat-grid-list [cols]="cars.length" [rowHeight]="650">
+  <mat-grid-tile *ngFor="let carInfo of filtered ? filteredCars : cars">
+    <mat-card class="car-card">
+      <mat-card-header>
+        <div mat-card-avatar datasrc="carInfo.img"></div>
+        <mat-card-title>{{ carInfo.name }}</mat-card-title>
+        <mat-card-subtitle>Série {{ carInfo.series }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="carInfo.img" alt="Image of a BMW car">
+      <mat-card-content>
+        <p>
+          {{carInfo.desc}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button [class.is-favorite]="carInfo.favorite" (click)="addFavorite(carInfo.id)" mat-flat-button>
+          <mat-icon  class="car-card-action-icon">favorite</mat-icon>
+          <span>FAVORITO</span>
+        </button>
+        <button mat-flat-button>
+          <mat-icon class="car-card-action-icon">search</mat-icon>
+          <span>DETALHES</span>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+

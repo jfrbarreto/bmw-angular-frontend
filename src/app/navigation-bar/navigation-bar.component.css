@@ -1,0 +1,51 @@
+.nav-top {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  height: 80px;
+  /*color: #8e8e8e;*/
+  color: black;
+  margin-bottom: 10px;
+}
+
+.nav-logo {
+  background-image: url(https://www.bmw.pt/content/dam/bmw/marketPT/bmw_pt/images/id-module/BMW_Identity_Module_100_pt_white.png);
+  background-position: center center;
+  width: 90px;
+  height: 98px;
+  left: 20px;
+  top: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .2);
+  position: absolute;
+
+}
+
+.nav-title {
+  margin-left: 120px;
+}
+
+.nav-icon {
+  margin-right: 8px
+}
+
+.nav-input {
+  font-size: 14px;
+}
+
+.nav-action {
+  border: 1px solid #e6e6e6;
+  margin-right: 10px;
+}
+
+.nav-action-is-active {
+  background: black;
+  color: white
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
